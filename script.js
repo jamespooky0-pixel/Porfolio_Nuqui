@@ -569,20 +569,6 @@ const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 /* ─────────────────────────────────────────
-   13. RESUME BUTTON (placeholder)
-───────────────────────────────────────── */
-const resumeBtn = document.getElementById('resumeBtn');
-if (resumeBtn) {
-  resumeBtn.addEventListener('click', (e) => {
-    // Replace href with your actual resume file path e.g. './resume.pdf'
-    if (resumeBtn.getAttribute('href') === '#') {
-      e.preventDefault();
-      alert('📄 Resume coming soon! Upload your PDF and update the link in index.html');
-    }
-  });
-}
-
-/* ─────────────────────────────────────────
    14. CSS KEYFRAME INJECTION (pop-in for filter)
 ───────────────────────────────────────── */
 const style = document.createElement('style');

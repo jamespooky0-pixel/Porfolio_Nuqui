@@ -89,7 +89,7 @@
       <p>Hey! I'm <strong>Christopher James Nuqui</strong> — a Computer Studies student majoring in <span class="highlight">Game Development</span> at <span class="highlight">UPHSL</span>, building 2D and 3D games in Unity while living at the intersection of <span class="highlight">technology</span>, <span class="highlight">clean code</span>, and <span class="highlight">fast machines</span>.</p>
       <p>I'm Cisco-certified, IC3 digitally literate, and recently deployed a SUI Portfolio Project during DEVCON Laguna's Smart Contracts Code Camp. Whether I'm scripting game mechanics in C# or learning about the latest turbocharged build, my drive for excellence never stops.</p>
       <p>When I'm not pushing pixels or writing functions, you'll find me exploring car meets, tinkering with electronics, or deep-diving into the latest tech releases.</p>
-      <a href="#" class="btn btn-primary" id="resumeBtn"><i class="fas fa-download"></i> Download Resume</a>
+      <a href="#" class="btn btn-primary" id="resumeBtn"><i class="fas fa-eye"></i> View Resume</a>
     </div>
     <div class="about-stats">
       <div class="stat-card">
@@ -223,7 +223,7 @@
       <span class="cert-view-hint"><i class="fas fa-eye"></i></span>
     </div>
 
-    <div class="cert-card" data-cert-img="certs/certsdevcon-smart-contracts.png">
+    <div class="cert-card" data-cert-img="certs/certsdevcon-smart-contracts.PNG">
       <div class="cert-icon"><i class="fas fa-code"></i></div>
       <div class="cert-info">
         <h3>Move Smart Contracts Code Camp — SUI Portfolio Project</h3>
@@ -510,6 +510,53 @@
 <button id="backToTop" aria-label="Back to top" title="Back to top">
   <i class="fas fa-chevron-up"></i>
 </button>
+
+<!-- ─── RESUME MODAL ─── -->
+<div id="resumeModal" class="resume-modal" aria-hidden="true">
+  <div class="resume-modal-overlay"></div>
+  <div class="resume-modal-content">
+    <div class="resume-modal-header">
+      <h3><i class="fas fa-file-alt"></i> My Resume</h3>
+      <div class="resume-modal-actions">
+        <a href="resume.html" download="Christopher_Nuqui_Resume.html" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> Download</a>
+        <button id="resumeModalClose" class="resume-modal-close" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div class="resume-modal-body">
+      <iframe id="resumeIframe" src="resume.html" title="Resume"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+// Resume modal
+(function() {
+  var btn = document.getElementById('resumeBtn');
+  var modal = document.getElementById('resumeModal');
+  var closeBtn = document.getElementById('resumeModalClose');
+  var overlay = modal.querySelector('.resume-modal-overlay');
+
+  function openResume(e) {
+    e.preventDefault();
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeResume() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', openResume);
+  closeBtn.addEventListener('click', closeResume);
+  overlay.addEventListener('click', closeResume);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeResume();
+  });
+})();
+</script>
 
 <script src="script.js"></script>
 </body>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christopher James Nuqui — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #1a1a2e;
+      background: #fff;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in 0.6in;
+    }
+
+    @media print {
+      body { padding: 0; margin: 0; }
+      .no-print { display: none; }
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #0077cc;
+    }
+    .header h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      color: #0a0a1a;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .header .subtitle {
+      font-size: 11pt;
+      color: #444;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .header .contact-row {
+      font-size: 9pt;
+      color: #555;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .header .contact-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Section */
+    .section { margin-bottom: 16px; }
+    .section-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0077cc;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* Entries */
+    .entry { margin-bottom: 10px; }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .entry-title { font-weight: 600; font-size: 10.5pt; }
+    .entry-date { font-size: 9pt; color: #666; font-style: italic; }
+    .entry-sub { font-size: 9.5pt; color: #444; font-style: italic; }
+
+    /* Lists */
+    ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+    li {
+      font-size: 10pt;
+      margin-bottom: 3px;
+      color: #333;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 24px;
+    }
+    .skill-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10pt;
+      padding: 2px 0;
+      border-bottom: 1px dotted #eee;
+    }
+    .skill-row .label { color: #333; }
+    .skill-row .level { color: #666; font-size: 9pt; }
+
+    /* Certs list */
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10pt;
+      padding: 2px 0;
+    }
+    .cert-item .cert-name { font-weight: 500; }
+    .cert-item .cert-issuer { color: #666; font-size: 9pt; }
+
+    /* Print button */
+    .print-btn {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 10pt;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .print-btn:hover { background: #005fa3; }
+  </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">📄 Save as PDF</button>
+
+<!-- ─── HEADER ─── -->
+<div class="header">
+  <h1>Christopher James Nuqui</h1>
+  <p class="subtitle">Game Developer | Full-Stack Web Developer | IT &amp; Networking</p>
+  <div class="contact-row">
+    <span>📧 your@email.com</span>
+    <span>📍 Philippines</span>
+    <span>🔗 github.com/jamesspooky0-pixel</span>
+    <span>🔗 linkedin.com/in/YOUR_USERNAME</span>
+  </div>
+</div>
+
+<!-- ─── OBJECTIVE ─── -->
+<div class="section">
+  <div class="section-title">Objective</div>
+  <p style="font-size:10pt; color:#333;">
+    Game Development student at UPHSL with certifications in Cisco Networking, IC3 Digital Literacy, and hands-on experience in Unity (2D/3D), web development, and smart contract deployment. Seeking opportunities to apply my skills in game development, software engineering, or IT.
+  </p>
+</div>
+
+<!-- ─── EDUCATION ─── -->
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Bachelor of Science in Computer Studies — Major in Game Development</span>
+      <span class="entry-date">Expected 2027</span>
+    </div>
+    <div class="entry-sub">University of Perpetual Help System Laguna (UPHSL)</div>
+  </div>
+</div>
+
+<!-- ─── SKILLS ─── -->
+<div class="section">
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-row"><span class="label">Unity Engine (2D &amp; 3D)</span><span class="level">Advanced</span></div>
+    <div class="skill-row"><span class="label">C# (Unity Scripting)</span><span class="level">Advanced</span></div>
+    <div class="skill-row"><span class="label">HTML / CSS / JavaScript</span><span class="level">Advanced</span></div>
+    <div class="skill-row"><span class="label">React / Tailwind CSS</span><span class="level">Intermediate</span></div>
+    <div class="skill-row"><span class="label">Node.js / REST APIs</span><span class="level">Intermediate</span></div>
+    <div class="skill-row"><span class="label">Python</span><span class="level">Intermediate</span></div>
+    <div class="skill-row"><span class="label">MySQL / Database Design</span><span class="level">Intermediate</span></div>
+    <div class="skill-row"><span class="label">Cisco Networking (CCNA)</span><span class="level">Intermediate</span></div>
+    <div class="skill-row"><span class="label">PC Hardware &amp; Software</span><span class="level">Advanced</span></div>
+    <div class="skill-row"><span class="label">Git / GitHub</span><span class="level">Advanced</span></div>
+    <div class="skill-row"><span class="label">Smart Contracts (Move/SUI)</span><span class="level">Beginner</span></div>
+    <div class="skill-row"><span class="label">Linux / CLI</span><span class="level">Intermediate</span></div>
+  </div>
+</div>
+
+<!-- ─── CERTIFICATIONS ─── -->
+<div class="section">
+  <div class="section-title">Certifications</div>
+  <div class="cert-item">
+    <span class="cert-name">CCNAv7: Introduction to Networks</span>
+    <span class="cert-issuer">Cisco Networking Academy — Apr 2024</span>
+  </div>
+  <div class="cert-item">
+    <span class="cert-name">IT Essentials: PC Hardware and Software</span>
+    <span class="cert-issuer">Cisco Networking Academy — Aug 2023</span>
+  </div>
+  <div class="cert-item">
+    <span class="cert-name">IC3 Digital Literacy — GS6 Level 1</span>
+    <span class="cert-issuer">Certiport / Pearson VUE — Nov 2025</span>
+  </div>
+  <div class="cert-item">
+    <span class="cert-name">Move Smart Contracts Code Camp (SUI Portfolio)</span>
+    <span class="cert-issuer">DEVCON Laguna — May 2026</span>
+  </div>
+</div>
+
+<!-- ─── PROJECTS ─── -->
+<div class="section">
+  <div class="section-title">Projects</div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Personal Portfolio Website</span>
+      <span class="entry-date">2026</span>
+    </div>
+    <ul>
+      <li>Built a responsive portfolio with particle backgrounds, animated skill bars, certificate lightbox, and RPM gauge easter egg</li>
+      <li>Deployed on Vercel &amp; GitHub Pages using vanilla HTML, CSS, and JavaScript</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Pokémon Battle Game — Database Design</span>
+      <span class="entry-date">2026</span>
+    </div>
+    <ul>
+      <li>Designed a full relational database schema for a Pokémon Battle Game System using MySQL Workbench</li>
+      <li>Entities: Players, Trainers, Pokémon, Labs, Battlefields, Battle Bags, Audit Logs</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">SUI Portfolio Project (Web3)</span>
+      <span class="entry-date">2026</span>
+    </div>
+    <ul>
+      <li>Deployed a smart contract project on the SUI blockchain during DEVCON Laguna's Code Camp</li>
+      <li>Technologies: Move language, SUI framework</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ─── SEMINARS ─── -->
+<div class="section">
+  <div class="section-title">Seminars &amp; Events</div>
+  <div class="cert-item">
+    <span class="cert-name">#CICS_CARE: Community Allies for Responsible E-citizens</span>
+    <span class="cert-issuer">UST CICS — Dec 2022</span>
+  </div>
+  <div class="cert-item">
+    <span class="cert-name">XPERIENCE: Career-Building Seminar</span>
+    <span class="cert-issuer">UST SITE — Apr 2023</span>
+  </div>
+  <div class="cert-item">
+    <span class="cert-name">Level Up Tech, Level Up You: Move Smart Contracts Code Camp</span>
+    <span class="cert-issuer">DEVCON Laguna — May 2026</span>
+  </div>
+</div>
+
+<!-- ─── INTERESTS ─── -->
+<div class="section">
+  <div class="section-title">Interests</div>
+  <p style="font-size:10pt; color:#333;">
+    Game Development (Unity 2D/3D) • Car Culture &amp; Automotive Tech • Open Source • Competitive Programming • Networking &amp; Cybersecurity
+  </p>
+</div>
+
+</body>
+</html>
